@@ -136,10 +136,11 @@ main{
     transition: .25s;
 }
 
-.apparel-card:hover .apparel-image{
+.apparel-image:hover{ 
     width: 400px;
     border: solid 2px black;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .apparel-card p{
