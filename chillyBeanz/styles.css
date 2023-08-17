@@ -37,8 +37,6 @@ body{
 
 .logo-img{
     width: 100px;
-    border-radius: 45%;
-    border: solid 1px black;
 }
 
 .menu-div{
@@ -131,4 +129,8 @@ footer{
     flex: 1;
 
     background-color: pink;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
