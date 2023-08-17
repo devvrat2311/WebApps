@@ -105,7 +105,8 @@ main{
 .apparel-card{
     width: 100%;
     height: 100%;
-    border: solid 2px lightcoral;
+    border: solid 2px white;
+    border-radius: 20px;
     
     display: flex;
     flex-direction: column;
@@ -115,6 +116,7 @@ main{
 
 .apparel-card .apparel-image{
     width: 400px;
+    border-radius: 15px;
 }
 
 .apparel-card p{
