@@ -17,6 +17,11 @@ body{
     align-items: center;
 
     transition: .5s;
+
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; */
 }
 
 .head-container:hover{
@@ -110,18 +115,37 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transition: .5s;
 }
 
+.apparel-card:hover{
+    background-color: white;
+}
+
+
 .apparel-card .apparel-image{
+    width: 350px;
+    border-radius: 15px;
+    transition: .25s;
+}
+
+.apparel-card:hover .apparel-image{
     width: 400px;
+    border: solid 2px black;
     border-radius: 15px;
 }
 
 .apparel-card p{
     color: white;
     font-family: 'Handjet', cursive;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0;
+
+}
+
+.apparel-card:hover p{
+    color: black;
 }
 
 
