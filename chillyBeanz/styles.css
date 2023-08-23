@@ -3,7 +3,12 @@ body{
     flex-direction: column;
     height: 100vh;
     margin: 0;
-
+/* note: following code is to make background fill the entire page regardless of the html element */
+    /* background-image: url('images/chillybeanz_2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; */
+    background-color: black;
 }
 
 .head-container{
@@ -157,11 +162,15 @@ main{
 
 
 footer{
-    flex: 1;
+    height: 70px;
 
-    background-color: pink;
+    background-color: lightcoral;
     
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    margin: 20px;
+    border-radius: 20px;
 }
