@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-23</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sorting_styles.css">
+    <link href="../themes/prism.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="head-content">
+        <div class="title-text">
+            <p>DEV-23</p>
+            <p>BLOG</p>
+        </div>
+        <div class="navigate">
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="bubble-sort">
+            <h1>
+                Sorting in C++
+            </h1>
+            <p>
+                Sorting comes in handy in many different scenarios
+                , whether you want to solve any competetive problem
+                or when it comes to any sort of logic in a program
+                which requires sorting. While the algorithm library
+                in the STL has a function called sort() which will
+                sort any vector-like object with the quickest speed,
+                it is very important to know how the basic logic of
+                sorting works and to be able to write your own custom
+                sort function when the need arises. We will now see
+                some algorithms of sorting.
+            </p>
+
+            <h2>Bubble Sort</h2>
+
+            <p>
+                Bubble sort is the simplest technique in which we compare every
+                element with its adjacent element if they are not in order.
+                This wat at the end of every iteration(called a pass), the 
+                heaviest element gets bubbled up at the end of the list.
+            </p>
+
+            <img src="images/bubble-sort-array.png">
+            <img src="images/bubble-sort-Pass1.png">
+            <img src="images/bubble-sort-Pass2.png">
+            <img src="images/bubble-sort-Pass3.png">
+
+            <p>
+                As seen above since it's a small array and was almost sorted
+                we managed to get a completely sorted array in a few passes.
+            </p>
+            <p>
+                Below is the implementation in C++: 
+            </p>
+            <pre><code class="language-cpp">
+                #include&lt;iostream&gt;
+                using namespace std;
+
+                int main()
+                {
+                    int i, j, temp;
+                    int a[5] = {10, 2, 0, 43, 12};
+                    cout << "Input list ..." << endl;
+
+                    for(i = 0; i<5; i++){
+                        cout << a[i] << " ";
+                    }
+                    cout << endl;
+
+                    for(i = 0; i<5; i++){
+                        for(j = i+1; j<5; j++){
+                            if(a[i] < a[j]){
+                                temp = a[i];
+                                a[i] = a[j];
+                                a[j] = temp;
+                            }
+                        }
+                    }
+                    cout << "Sorted Element List ... \n";
+
+                    for(i = 0; i<5; i++){
+                        cout << a[i] << " ";
+                    }
+                    return 0;
+                }
+            </code></pre>
+            <pre><p>
+                Output:
+
+                Input list …
+                
+                10      2       0       43      12
+                
+                Sorted Element List …
+                
+                0       2       10      12      43
+            </p></pre>
+
+            <p>
+                As seen from the output, in bubble sort technique, 
+                with every pass the heaviest element is bubbled up to
+                the end of the array thereby sorting the array completely.
+            </p>
+
+            <h2>Selection Sort</h2>
+            <pre><code class="language-cpp">
+                double divide(int x, int y)
+                {
+                    if(y == 0)
+                        return  doubleLiteral;
+                    else
+                        return static_cast&lt;double&gt;(x)/y;
+                }
+            </code></pre>
+            <p>
+                But this is also a problem since there is no value
+                that we can pass through the doubleLiteral which
+                will differentiate our error case from an answer
+                coming after dividing two valid inputs. Therefore
+                we will resort to std::cerr and a rather complicated
+                program, which will be even harder to understand 
+                for someone who has not written it.
+            </p>
+            <pre><code class="language-cpp">
+                #include&lt;iostream&gt;
+
+                double divide(int x, int y, bool& outSuccess)
+                {
+                    if (y == 0)
+                    {
+                        outSuccess = false;
+                        return 0.0;
+                    }
+                
+                    outSuccess = true;
+                    return static_cast<double>(x)/y;
+                }
+                    
+                int main()
+                {
+                    bool success {}; // we must now pass in a bool value to see if the call was successful
+                    double result { divide(5, 3, success) };
+                
+                    if (!success) // and check it before we use the result
+                        std::cerr << "An error occurred" << std::endl;
+                    else
+                        std::cout << "The answer is " << result << '\n';
+                }
+            </code></pre>
+
+        </div>
+    </div>
+
+
+
+    <div class="foot-content">
+
+    </div>
+    <script src="../themes/prism.js"></script>
+</body>
+</html>
