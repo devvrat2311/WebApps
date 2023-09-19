@@ -1,43 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Shadows+Into+Light&family=Skranji&display=swap');
+
 body{
     height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding: 0;
 
-    background-color: lightcyan;
+
+    background-image: url('images/background-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+
+    color: white;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
 }
 
-pre{
-    background-color: lightblue;
-    padding: 5px;
-    border: 1px solid black;
-    white-space: pre-wrap;
-    font-family: "Courier New", monospace;
-    
-}
-  
 
+.material-symbols-outlined{
+font-variation-settings: 
+'FILL' 0,
+'wght' 250,
+'GRAD' -25,
+'opsz' 24;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.material-symbols-outlined.md-34{
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+i{
+    margin: 0;
+    padding: 0;
+}
+
+img.top-right{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-left: solid white 2px;
+}
 
 .head-content{
-    flex: 2;
+    min-height: 100px;
+    max-height: 100px;
 
-    border: solid 2px lightseagreen;
+    display: flex;
 
+    border: solid 2px white;
+    border-radius: 10px;
     margin-bottom: 5px;
+}
+
+.head-content .title-text {
+    flex: 1;
+
+    display: flex;
+    justify-content: left;
+    align-items:center;
+
+    margin: 10px;
+    font-size: 3.5rem;
+    font-family: 'Skranji', cursive;
+}
+.head-content .title-text p{
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.head-content .something-else{
+    flex: 1;
+
+    border-radius: 10px;
+
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 
 .main-content{
     flex: 10;
-    border: solid 2px rgb(240, 124, 124);
+    border: solid 2px white;
+    border-radius: 20px;
 
     margin-bottom: 5px;
 
     padding: 10px;
 }
+.main-content .current-things {
+    display: inline-block;
+    width: 30vw;
+    
+    margin: 20px;
+    padding: 10px;
+    border: solid white 2px;
+    border-radius: 20px;;
+
+    font-size: 1.3rem;
+
+    transition: .25s;
+}
+
+.main-content .current-things:hover{
+    background-color: white;
+
+    color: black;
+
+}
+.main-content .current-things ul {
+
+    list-style-type:none;
+
+}
+.main-content .current-things li {
+    margin: 10px;
+}
+
+
+.main-content .current-things:hover a{
+    color: black;
+}
 
 
 .foot-content{
-    flex: 1;
-    border: solid 2px lightseagreen;
+    height: 100px;
+    border: solid 2px white;
+    border-radius: 20px;
 }
