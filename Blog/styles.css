@@ -130,10 +130,18 @@ img.top-right{
     list-style-type:none;
 
 }
-.main-content .current-things li {
-    margin: 10px;
+
+.main-content .current-things li{
+    transition: .3s;
 }
 
+.main-content .current-things li:hover {
+    background: black;
+}
+
+.main-content .current-things li:hover a{
+    color: white;
+}
 
 .main-content .current-things:hover a{
     color: black;
