@@ -6,6 +6,8 @@
     <title>Image2</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shirtStyles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +45,7 @@
     <main>
         <div class="main-container">
             <div class="image-container">
-                <img src="images/shirt1B.jpeg">
+                <img src="images/shirt1B.jpeg" id="shirt1">
             </div>
             <div class="info-container">
                 <h1>LAST TIME</h1>
@@ -53,6 +55,15 @@
                 <button>buy it now</button>
             </div>
         </div>
+        <script>
+            document.getElementById("shirt1").addEventListener("mouseover", function () {
+                this.src = "images/shirt1F.jpeg";
+            })
+
+            document.getElementById("shirt1").addEventListener("mouseout", function () {
+                this.src = "images/shirt1B.jpeg";
+            })
+        </script>
 
     </main>
 

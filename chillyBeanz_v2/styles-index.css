@@ -1,0 +1,56 @@
+@font-face{
+    font-family: 'Akira';
+    src: url('Akira.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+
+    background-image: url('images/chillybeanz_2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.parallax{
+    background-image: url('images/chillybeanz_2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+
+#shopBtn{
+    position: absolute;
+    bottom: 35vh;
+    left: 40vw;
+
+    background-color: transparent;
+    overflow: hidden;
+    color: rgb(226, 230, 0);
+    border: solid;
+    border-color: rgb(226, 230, 0);
+    border-radius: 10px;
+
+    width: 20vw;
+    height: 5vh;
+
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Akira', sans-serif;
+    transition: .3s;
+}
+
+#shopBtn:hover{
+    background-color: rgb(226, 230, 0);
+    color: black;
+    
+    cursor: pointer;
+}

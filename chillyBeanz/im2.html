@@ -6,6 +6,7 @@
     <title>Image2</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shirtStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +44,7 @@
     <main>
         <div class="main-container">
             <div class="image-container">
-                <img src="images/shirt2B.jpeg">
+                <img src="images/shirt2B.jpeg" id="shirt2">
             </div>
             <div class="info-container">
                 <h1>DREAMING</h1>
@@ -54,6 +55,15 @@
             </div>
         </div>
 
+        <script>
+            document.getElementById("shirt2").addEventListener("mouseover", function () {
+                this.src = "images/shirt2F.jpeg";
+            })
+
+            document.getElementById("shirt2").addEventListener("mouseout", function () {
+                this.src = "images/shirt2B.jpeg";
+            })
+        </script>
     </main>
 
 
